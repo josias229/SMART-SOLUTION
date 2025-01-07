@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outil Objectifs SMART</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .priority {
+      color: red;
+      font-weight: bold;
+    }
+    .goal-actions i {
+      cursor: pointer;
+      margin: 0 5px;
+    }
+    #summary {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Définissez vos Objectifs SMART</h2>
+    <form id="smart-form" class="my-4">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="specific" class="form-label">Objectif spécifique</label>
+          <input type="text" id="specific" class="form-control" placeholder="Exemple : Apprendre une nouvelle compétence" required>
+        </div>
+        <div class="col-md-6">
+          <label for="measurable" class="form-label">Mesurable</label>
+          <input type="text" id="measurable" class="form-control" placeholder="Exemple : Maîtriser 3 cours en 6 mois" required>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="achievable" class="form-label">Atteignable</label>
+          <input type="text" id="achievable" class="form-control" placeholder="Exemple : Temps libre nécessaire" required>
+        </div>
+        <div class="col-md-6">
+          <label for="realistic" class="form-label">Réaliste</label>
+          <input type="text" id="realistic" class="form-control" placeholder="Exemple : Budget et ressources disponibles" required>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="timely" class="form-label">Temporel</label>
+          <input type="text" id="timely" class="form-control" placeholder="Exemple : Délai précis (6 mois)" required>
+        </div>
+        <div class="col-md-6">
+          <label for="priority" class="form-label">Priorité</label>
+          <select id="priority" class="form-select">
+            <option value="normal">Normal</option>
+            <option value="priority">Prioritaire</option>
+          </select>
+        </div>
+      </div>
+      <button type="button" id="add-goal" class="btn btn-primary">Ajouter l'objectif</button>
+    </form>
+
+    <h3 class="text-center mt-4">Vos Objectifs</h3>
+    <ul id="goal-list" class="list-group"></ul>
+    <div class="text-center mt-4">
+      <button type="button" id="download-summary" class="btn btn-success">Télécharger le récapitulatif</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
